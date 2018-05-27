@@ -4,50 +4,60 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-	public float moveSpeed = 10f;
-	public float jumpSpeed = 5f;
+	public float maxSpeed = 3;
+	public float speed = 50f;
+	public float jumpPwer = 50f;
 
-	Rigidbody2D rb;
+	public bool grounded;
 
+	private Rigidbody2D rb;
+	private Animator anim;
+	public Transform groundCheck;
 
-	// Use this for initialization
-	void Start () {
+	void Start(){
 
-		rb = GetComponent<Rigidbody2D> ();
-		
+		rb = gameObject.GetComponent<Rigidbody2D>();
+		anim = gameObject.GetComponent<Animator> ();
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
 
-		//press a - move left
-		if(Input.GetKey(KeyCode.A)){
-			rb.velocity = new Vector2 (-moveSpeed, rb.velocity.y);
-		}
-		//press d - move right
+	void Update(){
 
-		if(Input.GetKey(KeyCode.D)){
-			rb.velocity = new Vector2 (moveSpeed, rb.velocity.y);
-		}
+		grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
 
+		anim.SetBool ("grounded" , grounded);
+		anim.SetFloat ("airtime", rb.velocity.y);
+		anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Horizontal")));
 
-		//remove a - stop moving left
-
-		if(Input.GetKeyUp(KeyCode.A)){
-			rb.velocity = new Vector2 (0, rb.velocity.y);
-		}
-		//remove d - stop moving right
-
-		if(Input.GetKeyUp(KeyCode.D)){
-			rb.velocity = new Vector2 (0, rb.velocity.y);
+		if (Input.GetAxis ("Horizontal") < -0.1f) {
+			transform.localScale = new Vector3 (-1, 1, 1);
 		}
 
-		//jump
-		if (Input.GetKey (KeyCode.Space)) {
-			rb.velocity = new Vector2 (rb.velocity.x, jumpSpeed);
+		if (Input.GetAxis ("Horizontal") > 0.1f) {
+			transform.localScale = new Vector3 (1, 1, 1);
 		}
 
-
-		
+		if (Input.GetButtonDown ("Jump") && grounded) {
+			rb.AddForce (Vector2.up * jumpPwer, ForceMode2D.Impulse);
+			anim.SetTrigger ("jumping");
+		}
 	}
+
+	void FixedUpdate(){
+
+		float h = Input.GetAxis ("Horizontal");
+		rb.AddForce ((Vector2.right * speed) * h);
+
+		if (rb.velocity.x > maxSpeed) {
+			rb.velocity = new Vector2 (maxSpeed, rb.velocity.y);
+
+		}
+
+		if (rb.velocity.x < -maxSpeed) {
+			rb.velocity = new Vector2 (-maxSpeed, rb.velocity.y);
+		}
+			
+	}
+
+
 }

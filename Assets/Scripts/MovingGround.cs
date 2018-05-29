@@ -11,7 +11,7 @@ public class MovingGround : MonoBehaviour {
 
 	void Update () {
 
-		transform.position = Vector3.MoveTowards (transform.position, points [target].position, 5f * Time.deltaTime);
+		transform.position = Vector3.MoveTowards (transform.position, points [target].position, 3f * Time.deltaTime);
 		if (transform.position.Equals (points [target].position)) {
 			target = (target + 1) % points.Length;
 		}

@@ -47,6 +47,11 @@ TextureImporter:
     21300080: tileset_40
     21300082: tileset_41
     21300084: tileset_42
+    21300086: Wall
+    21300088: cave_walls _top
+    21300090: Cave_wall
+    21300092: Cave_roof
+    21300094: light_wall
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -720,6 +725,76 @@ TextureImporter:
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Wall
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 33
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cave_walls _top
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 178
+        width: 47
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cave_wall
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 207
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 4, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Cave_roof
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 179
+        width: 35
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: light_wall
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 206
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -14,7 +14,7 @@ public class GroundCheck : MonoBehaviour {
 
 	void Update()
 	{
-		character.grounded = Physics2D.Linecast(transform.position, transform.
+		//character.grounded = Physics2D.Linecast(transform.position, transform
 	}
 
 }

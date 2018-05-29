@@ -56,6 +56,10 @@ public class PlayerMovement : MonoBehaviour {
 		if (rb.velocity.x < -maxSpeed) {
 			rb.velocity = new Vector2 (-maxSpeed, rb.velocity.y);
 		}
+
+		if (h == 0) {
+			rb.velocity = new Vector2 (0, rb.velocity.y);
+		}
 			
 	}
 

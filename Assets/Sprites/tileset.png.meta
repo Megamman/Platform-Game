@@ -52,6 +52,8 @@ TextureImporter:
     21300090: Cave_wall
     21300092: Cave_roof
     21300094: light_wall
+    21300096: Top_Grass
+    21300098: Hanging Tall
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -793,6 +795,34 @@ TextureImporter:
         y: 206
         width: 34
         height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Top_Grass
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 113
+        width: 67
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Hanging Tall
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 172
+        width: 35
+        height: 107
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

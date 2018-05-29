@@ -25,12 +25,12 @@ TextureImporter:
     21300036: tileset_18
     21300038: tileset_19
     21300040: tileset_20
-    21300042: big
-    21300044: tileset_22
-    21300046: tileset_23
-    21300048: tileset_24
-    21300050: tileset_25
-    21300052: tileset_26
+    21300042: Large Edge
+    21300044: Floor_Rock
+    21300046: Floor_wide
+    21300048: Floor_grass
+    21300050: Floor_small
+    21300052: Floor_small_grass
     21300054: tileset_27
     21300056: tileset_28
     21300058: tileset_29
@@ -38,9 +38,9 @@ TextureImporter:
     21300062: tileset_31
     21300064: tileset_32
     21300066: tileset_33
-    21300068: tileset_34
-    21300070: tileset_35
-    21300072: tileset_36
+    21300068: Wall_Grass
+    21300070: Wall_Stone
+    21300072: Wall_rock
     21300074: tileset_37
     21300076: tileset_38
     21300078: tileset_39
@@ -417,7 +417,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: big
+      name: Large Edge
       rect:
         serializedVersion: 2
         x: 36
@@ -431,7 +431,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_22
+      name: Floor_Rock
       rect:
         serializedVersion: 2
         x: 144
@@ -445,7 +445,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_23
+      name: Floor_wide
       rect:
         serializedVersion: 2
         x: 192
@@ -459,7 +459,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_24
+      name: Floor_grass
       rect:
         serializedVersion: 2
         x: 256
@@ -473,7 +473,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_25
+      name: Floor_small
       rect:
         serializedVersion: 2
         x: 304
@@ -487,7 +487,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_26
+      name: Floor_small_grass
       rect:
         serializedVersion: 2
         x: 352
@@ -599,10 +599,10 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_34
+      name: Wall_Grass
       rect:
         serializedVersion: 2
-        x: 144
+        x: 145
         y: 48
         width: 32
         height: 32
@@ -613,7 +613,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_35
+      name: Wall_Stone
       rect:
         serializedVersion: 2
         x: 192
@@ -627,7 +627,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: tileset_36
+      name: Wall_rock
       rect:
         serializedVersion: 2
         x: 240

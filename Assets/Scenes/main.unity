@@ -194,6 +194,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &510406469
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4380200814402708, guid: cd032f9d2e6c56e41a09337b981c05d8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380200814402708, guid: cd032f9d2e6c56e41a09337b981c05d8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380200814402708, guid: cd032f9d2e6c56e41a09337b981c05d8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380200814402708, guid: cd032f9d2e6c56e41a09337b981c05d8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380200814402708, guid: cd032f9d2e6c56e41a09337b981c05d8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380200814402708, guid: cd032f9d2e6c56e41a09337b981c05d8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380200814402708, guid: cd032f9d2e6c56e41a09337b981c05d8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4380200814402708, guid: cd032f9d2e6c56e41a09337b981c05d8, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cd032f9d2e6c56e41a09337b981c05d8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &717128866
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +264,48 @@ Transform:
   m_Father: {fileID: 1927463976}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1320696423
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4202186341324244, guid: 6aa2adc0bc4a9124c84f2c95f1ea4d40, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202186341324244, guid: 6aa2adc0bc4a9124c84f2c95f1ea4d40, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.0188637
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202186341324244, guid: 6aa2adc0bc4a9124c84f2c95f1ea4d40, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.26780593
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202186341324244, guid: 6aa2adc0bc4a9124c84f2c95f1ea4d40, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202186341324244, guid: 6aa2adc0bc4a9124c84f2c95f1ea4d40, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202186341324244, guid: 6aa2adc0bc4a9124c84f2c95f1ea4d40, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202186341324244, guid: 6aa2adc0bc4a9124c84f2c95f1ea4d40, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4202186341324244, guid: 6aa2adc0bc4a9124c84f2c95f1ea4d40, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6aa2adc0bc4a9124c84f2c95f1ea4d40, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1927463973
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,7 +376,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 99
   m_Sprite: {fileID: 21300000, guid: ca0de7640f99c437897d6f524d2e8f48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

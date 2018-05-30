@@ -63,5 +63,10 @@ public class PlayerMovement : MonoBehaviour {
 			
 	}
 
-
+	void OnCollisionEnter2D (Collision2D other)
+	{
+		if (other.gameObject.tag == "mushroom") {
+			rb.AddForce (Vector2.up * jumpPwer * 1.5f, ForceMode2D.Impulse);
+		}
+	}
 }

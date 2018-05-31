@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
      <Compile Include="Assets\Scripts\GroundCheck.cs" />
+     <Compile Include="Assets\Scripts\LeftToRight.cs" />
      <Compile Include="Assets\Scripts\MovingGround.cs" />
      <Compile Include="Assets\Scripts\Parallaxing.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />

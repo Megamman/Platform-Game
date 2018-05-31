@@ -68,5 +68,13 @@ public class PlayerMovement : MonoBehaviour {
 		if (other.gameObject.tag == "mushroom") {
 			rb.AddForce (Vector2.up * jumpPwer * 1.5f, ForceMode2D.Impulse);
 		}
+
+	}
+
+
+	void OnTriggerEnter2D(Collider2D other){
+
+		//to add if collision from the Top Part of the Wasp. If player touches wasp from sides, it will remove 1 heart.
+		Destroy (other.gameObject);
 	}
 }

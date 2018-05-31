@@ -9,6 +9,7 @@ TagManager:
   - rightTag
   - mushroom
   - water
+  - waspEnemy
   layers:
   - Default
   - TransparentFX

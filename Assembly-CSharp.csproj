@@ -53,10 +53,13 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
      <Compile Include="Assets\Scripts\GroundCheck.cs" />
+     <Compile Include="Assets\Scripts\HUD.cs" />
      <Compile Include="Assets\Scripts\LeftToRight.cs" />
      <Compile Include="Assets\Scripts\MovingGround.cs" />
      <Compile Include="Assets\Scripts\Parallaxing.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Wasps.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>

@@ -14,10 +14,16 @@ public class PlayerMovement : MonoBehaviour {
 	private Animator anim;
 	public Transform groundCheck;
 
+	public int curHealth;
+	public int maxHealth = 100;
+
 	void Start(){
 
 		rb = gameObject.GetComponent<Rigidbody2D>();
 		anim = gameObject.GetComponent<Animator> ();
+
+		curHealth = maxHealth;
+
 
 	}
 
@@ -40,6 +46,16 @@ public class PlayerMovement : MonoBehaviour {
 		if (Input.GetButtonDown ("Jump") && grounded) {
 			rb.AddForce (Vector2.up * jumpPwer, ForceMode2D.Impulse);
 			anim.SetTrigger ("jumping");
+		}
+
+
+		if (curHealth > maxHealth) {
+
+			curHealth = maxHealth;
+		}
+
+		if (curHealth <= 0) {
+			Die ();
 		}
 	}
 
@@ -72,9 +88,37 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 
-	void OnTriggerEnter2D(Collider2D other){
+	/*void OnTriggerEnter2D(Collider2D other){
 
 		//to add if collision from the Top Part of the Wasp. If player touches wasp from sides, it will remove 1 heart.
 		Destroy (other.gameObject);
+	}
+	*/
+	void Die(){
+
+		Application.LoadLevel (Application.loadedLevel);
+	}
+
+
+	public void Damage(int dmg){
+
+		curHealth -= dmg;
+		gameObject.GetComponent<Animation> ().Play ("Player_Red");
+
+	}
+
+	public IEnumerator Knockback(float knockDur, float knockbackPower, Vector3 knockbackDirection){
+
+		float timer = 0;
+
+		while (knockDur > timer) {
+
+			timer += Time.deltaTime;
+
+			rb.AddForce (new Vector3 (knockbackDirection.x * -100, knockbackDirection.y * knockbackPower, transform.position.z));
+		}
+
+		yield return 0;
+
 	}
 }

@@ -1,10 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Wasps.cs">
     <Files>
-      <File FileName="Assets/Scripts/MovingGround.cs" Line="19" Column="3" />
-      <File FileName="Assets/Scripts/LeftToRight.cs" Line="16" Column="3" />
-      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="77" Column="43" />
+      <File FileName="Assets/Scripts/PlayerMovement.cs" Line="106" Column="56" />
+      <File FileName="Assets/Scripts/Wasps.cs" Line="27" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

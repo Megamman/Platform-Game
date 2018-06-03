@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour {
 
 	public GameObject PauseUI;
 
+
 	private bool paused = false;
 
 	void Start()
@@ -51,5 +52,8 @@ public class PauseMenu : MonoBehaviour {
 
 		Application.Quit ();
 	}
+
+
+
 
 }

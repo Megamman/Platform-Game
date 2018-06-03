@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour {
 
 	public int curHealth;
 	public int maxHealth = 100;
+	public GameObject GameOver;
+
+
 
 	void Start(){
 
@@ -23,6 +26,8 @@ public class PlayerMovement : MonoBehaviour {
 		anim = gameObject.GetComponent<Animator> ();
 
 		curHealth = maxHealth;
+		GameOver.SetActive (false);
+
 
 
 	}
@@ -95,8 +100,8 @@ public class PlayerMovement : MonoBehaviour {
 	}
 	*/
 	void Die(){
-
-		Application.LoadLevel (Application.loadedLevel);
+		Time.timeScale = 0;
+		GameOver.SetActive (true);
 	}
 
 

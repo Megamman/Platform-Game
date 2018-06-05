@@ -10,7 +10,11 @@ TagManager:
   - mushroom
   - water
   - waspEnemy
+<<<<<<< HEAD
   - Coin
+=======
+  - BackGround
+>>>>>>> 4823ef6eafc8eedb1252d3ec4f057d9fd23ecad6
   layers:
   - Default
   - TransparentFX

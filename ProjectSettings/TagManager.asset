@@ -10,6 +10,7 @@ TagManager:
   - mushroom
   - water
   - waspEnemy
+  - Coin
   layers:
   - Default
   - TransparentFX

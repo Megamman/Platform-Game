@@ -16,7 +16,6 @@ public class Wasps : MonoBehaviour {
 
 		if (col.CompareTag ("Player")) {
 			player.Damage (1);
-
 			StartCoroutine (player.Knockback (0.02f, 450, player.transform.position));
 
 		}

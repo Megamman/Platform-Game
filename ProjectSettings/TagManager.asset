@@ -10,6 +10,7 @@ TagManager:
   - mushroom
   - water
   - waspEnemy
+  - BackGround
   layers:
   - Default
   - TransparentFX

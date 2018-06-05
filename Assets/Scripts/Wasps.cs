@@ -15,8 +15,12 @@ public class Wasps : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D col){
 
 		if (col.CompareTag ("Player")) {
-			player.Damage (1);
-			StartCoroutine (player.Knockback (0.02f, 450, player.transform.position));
+			if (player.grounded) {
+				player.Damage (1);
+				player.Knockback ();
+			} else {
+				Destroy (this.gameObject);
+			}
 
 		}
 

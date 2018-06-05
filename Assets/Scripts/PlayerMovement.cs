@@ -18,12 +18,15 @@ public class PlayerMovement : MonoBehaviour {
 	public int maxHealth = 100;
 	public GameObject GameOver;
 
+	SpriteRenderer _renderer;
+
 
 
 	void Start(){
 
 		rb = gameObject.GetComponent<Rigidbody2D>();
 		anim = gameObject.GetComponent<Animator> ();
+		_renderer = GetComponent<SpriteRenderer> ();
 
 		curHealth = maxHealth;
 		GameOver.SetActive (false);
@@ -41,11 +44,11 @@ public class PlayerMovement : MonoBehaviour {
 		anim.SetFloat ("speed", Mathf.Abs (Input.GetAxis ("Horizontal")));
 
 		if (Input.GetAxis ("Horizontal") < -0.1f) {
-			transform.localScale = new Vector3 (-1, 1, 1);
+			_renderer.flipX = true;
 		}
 
 		if (Input.GetAxis ("Horizontal") > 0.1f) {
-			transform.localScale = new Vector3 (1, 1, 1);
+			_renderer.flipX = false;
 		}
 
 		if (Input.GetButtonDown ("Jump") && grounded) {
@@ -93,12 +96,26 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
 
-	/*void OnTriggerEnter2D(Collider2D other){
+	void OnTriggerEnter2D(Collider2D other){
 
 		//to add if collision from the Top Part of the Wasp. If player touches wasp from sides, it will remove 1 heart.
-		Destroy (other.gameObject);
+		//Destroy (other.gameObject);
+
+		if (other.tag == "MovingPlatform") {
+			transform.parent = other.gameObject.transform;
+		}
 	}
-	*/
+
+	void OnTriggerExit2D(Collider2D other){
+
+		//to add if collision from the Top Part of the Wasp. If player touches wasp from sides, it will remove 1 heart.
+		//Destroy (other.gameObject);
+
+		if (other.tag == "MovingPlatform") {
+			transform.parent = null;
+		}
+	}
+
 	void Die(){
 		Time.timeScale = 0;
 		GameOver.SetActive (true);
@@ -108,22 +125,13 @@ public class PlayerMovement : MonoBehaviour {
 	public void Damage(int dmg){
 
 		curHealth -= dmg;
-		gameObject.GetComponent<Animation> ().Play ("Player_Red");
+		anim.SetTrigger ("damage");
 
 	}
 
-	public IEnumerator Knockback(float knockDur, float knockbackPower, Vector3 knockbackDirection){
-
-		float timer = 0;
-
-		while (knockDur > timer) {
-
-			timer += Time.deltaTime;
-
-			rb.AddForce (new Vector3 (knockbackDirection.x * -100, knockbackDirection.y * knockbackPower, transform.position.z));
-		}
-
-		yield return 0;
-
+	public void Knockback(){
+		float direction = _renderer.flipX ? 1 : -1;
+		Vector2 force = new Vector2 (direction * 150f, 7.5f);
+		rb.AddForce (force, ForceMode2D.Impulse);
 	}
 }

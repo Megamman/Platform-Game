@@ -9,13 +9,11 @@ public class StartScreenUI : MonoBehaviour {
 	private bool gameStart = true;
 
 
-	void Start()
+	void Awake()
 	{
 		Time.timeScale = 0;
 
 	}
-
-
 
 	public void StartGame(){
 		Time.timeScale = 1;

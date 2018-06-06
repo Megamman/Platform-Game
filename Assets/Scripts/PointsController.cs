@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class PointsController : MonoBehaviour {
 
 
-	public static int scoreValue = 0;
+	public static int coinCollection = 0;
 
 	
 	Text score; 
@@ -21,5 +21,11 @@ public class PointsController : MonoBehaviour {
 
 	}
 	
+	// Update is called once per frame
+	void Update () {
 
+		// How the text will show as score
+		score.text = "x" + coinCollection;
+
+	}
 }

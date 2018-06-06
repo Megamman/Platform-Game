@@ -18,11 +18,5 @@ public class MovingGround : MonoBehaviour {
 		
 	}
 
-	void MoveGround(){
 
-
-
-
-
-	}
 }

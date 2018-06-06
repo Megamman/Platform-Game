@@ -65,6 +65,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (curHealth <= 0) {
 			Die ();
 		}
+
 	}
 
 	void FixedUpdate(){

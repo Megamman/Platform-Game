@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\GroundCheck.cs" />
      <Compile Include="Assets\Scripts\HUD.cs" />
      <Compile Include="Assets\Scripts\LeftToRight.cs" />
+     <Compile Include="Assets\Scripts\lever.cs" />
      <Compile Include="Assets\Scripts\MovingGround.cs" />
      <Compile Include="Assets\Scripts\Parallaxing.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />

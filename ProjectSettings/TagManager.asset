@@ -12,6 +12,8 @@ TagManager:
   - BackGround
   - MovingPlatform
   - Coin
+  - firstLever
+  - SecondLever
   layers:
   - Default
   - TransparentFX

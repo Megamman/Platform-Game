@@ -10,7 +10,6 @@ public class CoinCollector : MonoBehaviour {
 	void Start(){
 		character = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerMovement> ();
 
-
 	}
 
 	void OnTriggerEnter2D(Collider2D col){
@@ -22,5 +21,6 @@ public class CoinCollector : MonoBehaviour {
 		}
 
 	}
+
 
 }

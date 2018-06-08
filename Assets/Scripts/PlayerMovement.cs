@@ -131,9 +131,8 @@ public class PlayerMovement : MonoBehaviour {
 
 		curHealth -= dmg;
 		anim.SetTrigger ("damage");
-
 	}
-
+		
 	public void Knockback(){
 		float direction = _renderer.flipX ? 1 : -1;
 		Vector2 force = new Vector2 (direction * 150f, 7.5f);

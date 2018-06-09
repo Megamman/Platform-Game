@@ -18,7 +18,7 @@ public class PointsController : MonoBehaviour {
 	void Start () {
 
 		score = GetComponent <Text> ();
-
+		coinCollection = 0;
 	}
 	
 	// Update is called once per frame

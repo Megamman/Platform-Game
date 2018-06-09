@@ -16,6 +16,7 @@ public class CoinCollector : MonoBehaviour {
 
 		if (col.CompareTag ("Player")) 
 		{
+			SoundManagerScript.PlaySound ("CoinCollect");
 			Destroy (this.gameObject);
 			PointsController.coinCollection += 1;
 		}
